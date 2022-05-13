@@ -20,7 +20,7 @@ export default function App() {
           </label>
           <label>
             Phone Number
-            <input type="telephone" name="phone" />
+            <input type="tel" name="phone" />
           </label>
 
           <label>
