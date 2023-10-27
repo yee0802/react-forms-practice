@@ -1,35 +1,74 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+
+  //TODO: Add your state fields here
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <form className="form">
+        <h2>Complaining form!</h2>
+        <div className="form__section-left">
+          <label>
+            Full name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Address
+            <input type="text" name="address" />
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" name="phone" />
+          </label>
 
-export default App
+          <label>
+            Email
+            <input type="email" name="email" />
+          </label>
+        </div>
+
+        <div className="form__section-right">
+          <label>
+            Write your complaint
+            <textarea
+              name="complaint"
+              rows="10"
+              placeholder="You can complain here"
+            ></textarea>
+          </label>
+
+          <div className="form__radio-group">
+            <p>How do you want to be contacted? </p>
+            <label>
+              <input type="radio" name="contact" value="phone" />
+              Phone
+            </label>
+
+            <label>
+              <input type="radio" name="contact" value="email" />
+              Email
+            </label>
+
+            <label>
+              <input type="radio" name="contact" value="post" />
+              Slow Mail
+            </label>
+
+            <label>
+              <input type="radio" name="contact" value="none" />
+              No contact!
+            </label>
+          </div>
+
+          <label>
+            I agree you take my data, and do whatever
+            <input type="checkbox" name="consent" id="consent" />
+          </label>
+        </div>
+        <input type="submit" value="Submit!" />
+      </form>
+    </>
+  );
+}
