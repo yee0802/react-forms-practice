@@ -1,18 +1,8 @@
-# React Forms Practice
+# React + Vite
 
-![](image.png)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Learning Objectives
-- Use event listeners for forms, including submit and change events
-- Explain the difference between controlled and uncontrolled elements, including form elements.
-- Build a component with a controlled form that has multiple inputs of different types
-- Refactor a component that uses multiple state hooks to use one that dynamically handles multiple inputs
+Currently, two official plugins are available:
 
-## Instructions
-- Make the form in App.js a controlled form
-  - Add state for each field
-  - Make each field a controlled component
-  - `console.log` the value of each field when the form is submitted
-
-## Extension 1
-- Refactor your solution to use a single form state object
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
